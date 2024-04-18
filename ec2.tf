@@ -19,7 +19,7 @@ resource "aws_instance" "web" {
       type = "ssh"
       host = self.public_ip
       user = "ec2-user"
-      private_key = "${file("AWS-Keypair.pem")}"
+      private_key = "${filebase64("AWS-Keypair.pem")}"
     }  
   }
 }
