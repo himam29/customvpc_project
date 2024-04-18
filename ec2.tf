@@ -12,14 +12,14 @@ resource "aws_instance" "web" {
   }
 
   provisioner "file" {
-    source = "./AWS-Keypair.pem"
+    source = "AWS-Keypair.pem"
     destination = "/home/ec2-user/AWS-Keypair.pem"
   
     connection {
       type = "ssh"
       host = self.public_ip
       user = "ec2-user"
-      private_key = "${file("./AWS-Keypair.pem")}"
+      private_key = "${file("AWS-Keypair.pem")}"
     }  
   }
 }
