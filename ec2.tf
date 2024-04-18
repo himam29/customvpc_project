@@ -12,7 +12,7 @@ resource "aws_instance" "web" {
   }
 
   provisioner "file" {
-    source = "AWS-Keypair.pem"
+    source = "./AWS-Keypair.pem"
     destination = "/home/ec2-user/AWS-Keypair.pem"
   
     connection {
