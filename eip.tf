@@ -1,3 +1,3 @@
 resource "aws_eip" "myeip" {
-  domain      = vpc
+  domain      = "vpc"
 }
